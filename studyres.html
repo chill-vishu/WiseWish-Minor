@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resources - WiseWish</title>
+    <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .hero-section {
+            background: url('./assets/Images/vecteezy_back-to-school-doodles-in-chalkboard-background_12086089.jpg') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            text-shadow: 5px 6px 10px black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+
+        
+        .category-thumbnail {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .category-card {
+            margin-bottom: 30px;
+        }
+
+        .category-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .modal-header, .modal-footer {
+            border: none;
+        }
+
+        .stream-thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .modal-body .stream-option {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .modal-body .stream-option button {
+            flex: 1;
+            margin-left: 15px;
+        }
+        footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/Images/logo.png" alt="Bootstrap" width="80px" height="40px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="tools.html">Tools</a>
+                </li>
+                <li class="nav-item"></li>
+                  <a class="nav-link active" href="studyres.html">Study Resources</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary" href="signup.html">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+    <section class="hero-section">
+        <h1>Study Resources</h1>
+        <p>Find the best materials to excel in your academic journey</p>
+    </section>
+
+   
+    <div class="container mt-5">
+        
+        <div class="row category-card">
+            <div class="col-md-4">
+                <img src="./assets/Images/thumbnails/pdfthumbnail.jpg" alt="Guide" class="category-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h3>Guides</h3>
+                <p class="category-description">Find comprehensive Guides for various subjects to help you in your studies. Click below to explore Guides based on your stream.</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#guideModal">View Guides</button>
+            </div>
+        </div>
+
+       
+        <div class="row category-card">
+            <div class="col-md-4">
+                <img src="./assets/Images/thumbnails/ytplaylistthumbnail.jpg" alt="YouTube Playlists" class="category-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h3>YouTube Playlists</h3>
+                <p class="category-description">Discover recommended YouTube playlists for a deeper understanding of various subjects. Choose your stream to get started.</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#playlistModal">View Playlists</button>
+            </div>
+        </div>
+
+        
+        <div class="row category-card">
+            <div class="col-md-4">
+                <img src="./assets/Images/thumbnails/Books.jpg" alt="Books" class="category-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h3>Books</h3>
+                <p class="category-description">Access a curated list of books that will guide you through your academic journey. Select your stream to explore.</p>
+                <button class="btn btn-primary"><a href="books.html" style="color: white; text-decoration: none;">View Books</a></button>
+            </div>
+        </div>
+
+        
+        <div class="row category-card">
+            <div class="col-md-4">
+                <img src="./assets/Images/thumbnails/roadmapthumbnail.jpg" alt="Roadmaps" class="category-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <h3>Roadmaps</h3>
+                <p class="category-description">Get access to detailed roadmaps to guide you through your academic or career path. Select your stream to view the roadmaps.</p>
+                <button class="btn btn-primary"><a href="roadmaps.html" style="color: white; text-decoration: none;">View Roadmaps</a></button>
+            </div>
+        </div>
+    </div>
+
+
+    
+<section class="testimonial-section py-5" style="background-color: #f1f1f1;">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: #343a40;">What Our Students Say</h2>
+        
+        <div class="row">
+           
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <p class="testimonial-text">"The resources on WiseWish have completely transformed my study routine. The tools and PDFs are easy to access and super helpful!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="./assets/Images/Persons/alice.jpg" alt="Student 1" class="rounded-circle" style="width: 50px; height: 50px;">
+                            <div class="ml-3">
+                                <h5 class="mb-0">Alice Johnson</h5>
+                                <p class="text-muted mb-0">Computer Science Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <p class="testimonial-text">"The CGPA calculator and daily task manager have made my academic life so much more organized. Highly recommend it!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="./assets/Images/Persons/michael.jpg" alt="Student 2" class="rounded-circle" style="width: 50px; height: 50px;">
+                            <div class="ml-3">
+                                <h5 class="mb-0">Michael Lee</h5>
+                                <p class="text-muted mb-0">Engineering Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <p class="testimonial-text">"WiseWish has been my go-to for study materials, especially the roadmap section which gave me a clear direction!"</p>
+                        <div class="d-flex align-items-center mt-3">
+                            <img src="./assets/Images/Persons/sara.jpg" alt="Student 3" class="rounded-circle" style="width: 50px; height: 50px;">
+                            <div class="ml-3">
+                                <h5 class="mb-0">Sara Davis</h5>
+                                <p class="text-muted mb-0">Mathematics Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="study-partner-section py-5" style="background-color: #e9ecef;">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #343a40;">Find a Study Partner</h2>
+        <p class="text-center mb-5">Looking for a study buddy? Fill out the form below, and we will help you connect with students studying the same subject!</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="studyPartnerForm" class="shadow p-4" style="background-color: white; border-radius: 8px;">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="subject">Preferred Subject</label>
+                        <select class="form-control" id="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="Science">Science</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Commerce">Commerce</option>
+                        </select>
+                    </div>
+
+                  
+                    <div class="form-group">
+                        <label for="studyTime">Preferred Study Time</label>
+                        <select class="form-control" id="studyTime" required>
+                            <option value="">Select Study Time</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                        </select>
+                    </div>
+
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Find My Study Partner</button>
+
+                  
+                    <div id="successMessage" class="mt-3 text-success text-center" style="display:none;">
+                        Thank you! We will connect you with a study partner soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="scholarship-section py-5">
+    <div class="container">
+      
+        <h2 class="text-center mb-4" style="color: #343a40;">WishWise Scholarship Program</h2>
+        
+      
+        <div class="text-center mb-4">
+            <img src="./assets/Images/scholarshipbanner.jpg" alt="Scholarship Banner" class="img-fluid" style="max-width: 400px; height: auto; border-radius: 8px;">
+        </div>
+
+        
+        <div class="mb-4">
+            <p class="text-center" style="font-size: 1.2rem; color: #495057;">
+                The WishWise Scholarship Program aims to support and encourage exceptional students by providing financial assistance to further their education. We are committed to helping talented individuals achieve their academic and career goals through our scholarship fund.
+            </p>
+        </div>
+
+        
+        <div class="mb-4">
+            <h4 class="mb-3" style="color: #343a40;">Eligibility Criteria</h4>
+            <ul class="list-unstyled">
+                <li>Must be a current student or accepted into an accredited institution.</li>
+                <li>Minimum GPA of 3.0 or equivalent academic standing.</li>
+                <li>Demonstrated financial need.</li>
+                <li>Active involvement in extracurricular activities or community service.</li>
+            </ul>
+        </div>
+
+       
+        <div class="mb-4">
+            <h4 class="mb-3" style="color: #343a40;">Scholarship Details</h4>
+            <ul class="list-unstyled">
+                <li>Scholarship amount: 15000₹ to 70000₹ based on financial need and academic performance.</li>
+                <li>Scholarship duration: One academic year, with the possibility of renewal based on academic progress.</li>
+                <li>Funds can be used for tuition, books, and other educational expenses.</li>
+            </ul>
+        </div>
+
+        <div class="mb-4">
+            <h4 class="mb-3" style="color: #343a40;">Application Guidelines</h4>
+            <ul class="list-unstyled">
+                <li>Submit a completed application form by the deadline.</li>
+                <li>Include a personal statement explaining your academic goals and financial need.</li>
+                <li>Provide official transcripts and proof of enrollment.</li>
+                <li>Letters of recommendation are encouraged but not required.</li>
+            </ul>
+        </div>
+
+       
+        <div class="text-center">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#scholarshipModal">Apply For Scholarship</button>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="study-tips-section py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+       
+        <h2 class="text-center mb-4" style="color: #343a40;">Daily Study Tips</h2>
+        
+        
+        <div class="row">
+            
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #1: Set Clear Goals</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Start each study session with clear, achievable goals. This helps maintain focus and measure progress effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #2: Take Regular Breaks</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Use the Pomodoro Technique: Study for 25 minutes, then take a 5-minute break. It helps maintain productivity and reduces burnout.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #3: Stay Organized</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Keep your study materials organized and create a study schedule. This will help you stay on track and manage your time efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #4: Practice Active Learning</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Engage with the material by summarizing, questioning, and discussing what you learn. Active learning helps deepen understanding and retention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #5: Stay Healthy</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Ensure you get enough sleep, eat well, and exercise regularly. A healthy body supports a sharp and focused mind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4 mb-4">
+                <div class="card" style="border: 1px solid #ced4da; border-radius: 8px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #007bff;">Tip #6: Stay Positive</h5>
+                        <p class="card-text" style="color: #495057;">
+                            Maintain a positive attitude towards studying. Celebrate small victories and remind yourself of your long-term goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Choose Your Stream</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="stream-option">
+                        <img src="./assets/Images/thumbnails/sciencedoodlethumbnail.jpg" alt="Science" class="stream-thumbnail">
+                        <a href="science.html" class="btn btn-outline-primary">Science</a>
+                    </div>
+                    <div class="stream-option">
+                        <img src="./assets/Images/thumbnails/mathsthumbnail.jpg" alt="Mathematics" class="stream-thumbnail">
+                        <a href="maths.html" class="btn btn-outline-primary">Mathematics</a>
+                    </div>
+                    <div class="stream-option">
+                        <img src="./assets/Images/thumbnails/computersciencethumb2.jpg" alt="Computer Science" class="stream-thumbnail">
+                        <a href="computerscience.html" class="btn btn-outline-primary">Computer Science</a>
+                    </div>
+                    <div class="stream-option">
+                        <img src="./assets/Images/thumbnails/commercethumb.png" alt="Commerce" class="stream-thumbnail">
+                        <a href="commerce.html" class="btn btn-outline-primary">Commerce</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal fade" id="playlistModal" tabindex="-1" aria-labelledby="playlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="playlistModalLabel">Choose Your Stream</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="stream-option">
+                    <img src="./assets/Images/thumbnails/sciencethumb.jpg" alt="Science" class="stream-thumbnail">
+                    <a href="science.html" class="btn btn-outline-primary">Science</a>
+                </div>
+                <div class="stream-option">
+                    <img src="./assets/Images/thumbnails/mathsthumbnail.jpg" alt="Mathematics" class="stream-thumbnail">
+                    <a href="maths.html" class="btn btn-outline-primary">Mathematics</a>
+                </div>
+                <div class="stream-option">
+                    <img src="./assets/Images/thumbnails/computersciencethumb2.jpg" alt="Computer Science" class="stream-thumbnail">
+                    <a href="computerscience.html" class="btn btn-outline-primary">Computer Science</a>
+                </div>
+                <div class="stream-option">
+                    <img src="./assets/Images/thumbnails/commercethumb.png" alt="Commerce" class="stream-thumbnail">
+                    <a href="commerce.html" class="btn btn-outline-primary">Commerce</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="scholarshipModal" tabindex="-1" role="dialog" aria-labelledby="scholarshipModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scholarshipModalLabel">Scholarship Application Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="scholarshipForm" method="POST" action="submit_scholarship.php">
+                    <div class="form-group">
+                        <label for="applicantName">Full Name</label>
+                        <input type="text" class="form-control" id="applicantName" name="applicantName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantEmail">Email Address</label>
+                        <input type="email" class="form-control" id="applicantEmail" name="applicantEmail" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="institution">Institution</label>
+                        <input type="text" class="form-control" id="institution" name="institution" placeholder="Enter your institution name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">GPA</label>
+                        <input type="text" class="form-control" id="gpa" name="gpa" placeholder="Enter your GPA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personalStatement">Personal Statement</label>
+                        <textarea class="form-control" id="personalStatement" name="personalStatement" rows="4" placeholder="Write a brief personal statement" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div id="modalSuccessMessage" class="text-success" style="display:none;">
+                    We will reach you soon!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+      <p>&copy; 2024 WiseWish. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script>
+
+   
+    document.getElementById('studyPartnerForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(function () {
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('studyPartnerForm').reset();
+        }, 3000);
+    });
+    
+
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

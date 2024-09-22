@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - WiseWish</title>
+    <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .bg {
+            background-image: url('./assets/Images/homw.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary, .btn-secondary {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .social-login {
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .social-login a.google {
+            background-color: #db4437;
+        }
+
+        .social-login a.facebook {
+            background-color: #3b5998;
+        }
+
+        .home-link, .login-link {
+            margin-top: 15px;
+            display: inline-block;
+            color: #343a40;
+            text-decoration: none;
+        }
+
+        .home-link:hover, .login-link:hover {
+            text-decoration: underline;
+        }
+
+        .additional-links {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="signup-container">
+            <h2>Create an Account on WiseWish</h2>
+            <form method="POST" action="signup.php">
+                <input type="text" class="form-control" name="full_name" placeholder="Full Name" required>
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+
+            <div class="social-login">
+                <p>Or sign up with</p>
+                <a href="#" class="google">Sign Up with Google</a>
+                <a href="#" class="facebook">Sign Up with Facebook</a>
+            </div>
+
+            <div class="additional-links">
+                <a href="login.html" class="login-link">Already have an account? Login</a>
+            </div>
+
+            <a href="index.html" class="home-link">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

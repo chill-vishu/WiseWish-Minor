@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Science Guides | WiseWish</title>
+  <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #2c2c2c;
+      color: #f8f9fa;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .hero {
+      background: url('./assets/Images/sciencedoodlebackground.jpg') center center/cover no-repeat;
+      color: white;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    
+    .intro-section {
+      background-color: #343a40;
+      padding: 60px 20px;
+      color: white;
+    }
+
+
+    .guides-section {
+      background-color: #1b1b1b;
+      padding: 60px 20px;
+    }
+    .guide-cards .card {
+      background-color: #343a40;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .guide-cards .card:hover {
+      transform: translateY(-10px);
+    }
+
+ 
+    .playlist-section {
+      background-color: #1f2a36;
+      padding: 60px 20px;
+    }
+
+    .playlist-cards .card {
+      background-color: #2e3a46;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .playlist-cards .card:hover {
+      transform: translateY(-10px);
+    }
+
+   
+    .apps-section {
+      background-color: #262626;
+      padding: 60px 20px;
+    }
+
+    .apps-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    .apps-section img:hover {
+      transform: scale(1.1);
+    }
+
+   
+    .stories-section {
+      background-color: #1e1e1e;
+      padding: 60px 20px;
+    }
+
+    
+    .quote-section {
+      background-color: #343a40;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+ 
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container ul li {
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="./assets/Images/logo.png" alt="WiseWish Logo" width="80px" height="40px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tools.html">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="studyres.html">Study Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="text-center">
+    <!-- <h1>Science Guides</h1>
+    <p>Explore the wonders of Science!</p> -->
+  </div>
+</section>
+
+
+<section class="intro-section">
+  <div class="container">
+    <h2>What is Science?</h2>
+    <p>Science is a systematic approach to understanding the natural world through observation, experimentation, and analysis. It involves asking questions, forming hypotheses, and testing them to draw conclusions about how things work. Relying on empirical evidence, science emphasizes reproducibility and the ability to falsify hypotheses. It encompasses various branches, including natural sciences (like physics and biology), formal sciences (like mathematics), social sciences (like psychology), and applied sciences (like engineering). By enhancing our knowledge and fostering critical thinking, science drives innovations that improve our lives and help us tackle global challenges.</p>
+  </div>
+</section>
+
+
+<section class="guides-section">
+  <div class="container">
+    <h2>Science Study Guides</h2>
+    <div class="row guide-cards">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/thumbnails/chemistythumbnail.jpg" class="card-img-top" alt="Guide 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chemistry</h5>
+            <a href="https://lordsuniversal.edu.in/wp-content/uploads/2021/05/FYJC-Chemistry.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/thumbnails/biologythumbnail.jpg" class="card-img-top" alt="Guide 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Biology</h5>
+            <a href="https://books.ebalbharati.in/pdfs/1203030421.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/thumbnails/physicsthumbnail.jpg" class="card-img-top" alt="Guide 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Physics</h5>
+            <a href="https://static.collegedekho.com/media/uploads/2022/09/21/class-12-physics-textbook-pdf.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<section class="playlist-section">
+  <div class="container">
+    <h2>Recommended Science Playlists</h2>
+    <div class="row playlist-cards">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/playlists/physics.jpg" class="card-img-top" alt="Physics Playlist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Physics Playlist</h5>
+            <a href="https://www.youtube.com/playlist?list=PLMnHwrPjHwJUjm55UpRr1S3xMPPayYgvK" class="btn btn-primary" target="_blank">Watch Playlist</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/playlists/chemistry.jpg" class="card-img-top" alt="Chemistry Playlist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chemistry Playlist</h5>
+            <a href="https://www.youtube.com/playlist?list=PLMnHwrPjHwJUjPCQh-mOzjV44KbZ95ADS" class="btn btn-primary" target="_blank">Watch Playlist</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="./assets/Images/playlists/biology.jpg" class="card-img-top" alt="Biology Playlist">
+          <div class="card-body text-center">
+            <h5 class="card-title">Biology Playlist</h5>
+            <a href="https://www.youtube.com/playlist?list=PLMnHwrPjHwJXcPKt8ff6yP-TYRoY_J1ek" class="btn btn-primary" target="_blank">Watch Playlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <blockquote class="blockquote">
+    "The important thing is to never stop questioning." – Albert Einstein
+  </blockquote>
+</section>
+
+<section class="apps-section">
+  <div class="container">
+    <h2>Recommended Apps</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <img src="./assets/Images/apps/nasa.webp" alt="App 1">
+        <h5>NASA</h5>
+        <a href="https://play.google.com/store/apps/details?id=gov.nasa&hl=en_IN" class="btn btn-outline-light">Download App</a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./assets/Images/apps/skyview.webp" alt="App 2">
+        <h5>SkyView® Lite</h5>
+        <a href="https://play.google.com/store/apps/details?id=com.t11.skyviewfree&hl=en_IN" class="btn btn-outline-light">Download App</a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./assets/Images/apps/solarwalk.avif" alt="App 3">
+        <h5>Solar Walk</h5>
+        <a href="https://play.google.com/store/apps/details?id=com.vitotechnology.SolarWalk&hl=en_IN" class="btn btn-outline-light">Download App</a>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./assets/Images/apps/newscientist.webp" alt="App 4">
+        <h5>New Scientist</h5>
+        <a href="https://play.google.com/store/apps/details?id=com.newscientist.mobile&hl=en_IN" class="btn btn-outline-light">Download App</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="stories-section">
+  <div class="container">
+    <h2>Student Success Stories</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <img src="./assets/Images/Persons/darren.jpg" class="card-img-top" alt="Student 1">
+          <div class="card-body">
+            <h5 class="card-title" style="color: black;">Darren Hudson</h5>
+            <p>"WiseWish helped me excel in my science studies and achieve my academic goals. The guides and playlists are incredibly helpful!"</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <img src="./assets/Images/Persons/ethel.jpg" class="card-img-top" alt="Student 2">
+          <div class="card-body">
+            <h5 class="card-title" style="color: black;">Ethel Fuller</h5>
+            <p>"The resources provided by WiseWish were instrumental in my success. I'm now pursuing my dreams thanks to the study guides."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 WiseWish. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WiseWish</title>
+  <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    .hero {
+      background: url('./assets/Images/homw.jpg') center center/cover no-repeat;
+      color: black;
+      text-shadow: 3px 3px 20px gray;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      text-shadow: 10px 10px 50px gray;
+    }
+    .reviews img {
+      border-radius: 50%;
+    }
+    .contact-form textarea {
+      resize: none;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+
+    .bg-image {
+    background-image: url('./assets/Images/study_doodle.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    color: black;
+}
+
+.bg-image .card {
+    background: rgba(255, 255, 255, 0.87);
+}
+.card {
+  padding: 10px;
+  border-radius: 10px;
+}
+#top-students div.card img {
+ box-shadow: 1px 2px 4px gray;
+}
+
+#inspirational-quote {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    position: relative;
+}
+
+#inspirational-quote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.quote-wrapper {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blockquote {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.blockquote-footer {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-top: 10px;
+    color: #ffffff;
+}
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="./assets/Images/logo.png" alt="Bootstrap" width="80px" height="40px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tools.html">Tools</a>
+          </li>
+          <li class="nav-item"></li>
+            <a class="nav-link" href="studyres.html">Study Resources</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="text-center">
+    <h1>Welcome to WiseWish!</h1>
+    <a href="studyres.html" class="btn btn-dark mt-3">Let's Study</a>
+    <a href="tools.html" class="btn btn-dark mt-3">Explore Tools</a>
+  </div>
+</section>
+
+
+<section id="why-choose-us" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-center mb-4">Why Choose Us?</h2>
+      <div class="row text-center">
+          <div class="col-md-4">
+              <h4>Accurate Tools</h4>
+              <p>Our tools are designed with precision to give accurate results.</p>
+          </div>
+          <div class="col-md-4">
+              <h4>Comprehensive Resources</h4>
+              <p>We provide not only tools but also study resources for better learning.</p>
+          </div>
+          <div class="col-md-4">
+              <h4>Easy to Use</h4>
+              <p>User-friendly design so you can focus on your work, not the tools.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section id="stats" class="py-5 text-white" style="background: linear-gradient(135deg, #3a6186, #89253e);">
+  <div class="container text-center">
+      <h2 class="mb-4" style="font-weight: bold;">Our Achievements</h2>
+      <div class="row">
+        
+          <div class="col-md-3 mb-4">
+              <div class="counter-box">
+                  <i class="fas fa-users fa-3x mb-3" style="color: #f4d03f;"></i>
+                  <h2 class="counter" data-count="5000">0</h2>
+                  <p>Happy Users</p>
+              </div>
+          </div>
+         
+          <div class="col-md-3 mb-4">
+              <div class="counter-box">
+                  <i class="fas fa-calculator fa-3x mb-3" style="color: #5dade2;"></i>
+                  <h2 class="counter" data-count="10000">0</h2>
+                  <p>Tools Used</p>
+              </div>
+          </div>
+          
+          <div class="col-md-3 mb-4">
+              <div class="counter-box">
+                  <i class="fas fa-file-alt fa-3x mb-3" style="color: #58d68d;"></i>
+                  <h2 class="counter" data-count="1000">0</h2>
+                  <p>Study Resources</p>
+              </div>
+          </div>
+          
+          <div class="col-md-3 mb-4">
+              <div class="counter-box">
+                  <i class="fas fa-clock fa-3x mb-3" style="color: #f1948a;"></i>
+                  <h2 class="counter" data-count="15000">0</h2>
+                  <p>Hours Saved</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="partners" class="py-5 bg-light text-center">
+  <div class="container">
+      <h2 class="mb-4">Our Partners</h2>
+      <div class="row" style="align-items: center;">
+          <div class="col-md-3">
+              <img src="./assets/Images/Partners/Sage_University,_Indore.jpg" alt="Partner 1" class="img-fluid" width="80px">
+          </div>
+          <div class="col-md-3">
+              <img src="./assets/Images/Partners/bootstrap-logo-1.png" alt="Partner 2" class="img-fluid" width="110px">
+          </div>
+          <div class="col-md-3">
+              <img src="./assets/Images/Partners/YouTube-Symbol.png" alt="Partner 3" class="img-fluid" width="120px">
+          </div>
+          <div class="col-md-3">
+              <img src="./assets/Images/Partners/Chatgpt.png" alt="Partner 4" class="img-fluid" width="80px">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="inspirational-quote" class="py-5 text-center">
+  <div class="container">
+      <div class="quote-wrapper">
+          <blockquote class="blockquote">
+              <p class="mb-4">"The only limit to our realization of tomorrow is our doubts of today."</p>
+              <footer class="blockquote-footer">Franklin D. Roosevelt</footer>
+          </blockquote>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="reviews py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">What Students Say</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1" class="img-fluid mb-3" width="100">
+        <p>"The calculators are super helpful! I saved so much time on my assignments."</p>
+        <p>- John Doe</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="User 2" class="img-fluid mb-3" width="100">
+        <p>"The study guides helped me ace my exams. Thank you, WiseWish!"</p>
+        <p>- Jane Smith</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="User 3" class="img-fluid mb-3" width="100">
+        <p>"Everything is so easy to use and well-organized. A great platform for students."</p>
+        <p>- Sam Wilson</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="book-recommendations" class="py-5" style="background-color: #f0f4f8;">
+  <div class="container">
+      <h2 class="text-center mb-4">Recommended Reading</h2>
+      <p>Dive into our curated list of must-read books to enhance your academic journey, boost productivity, and improve well-being. Explore these valuable resources and take your personal development to the next level!</p>
+      <br>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="./assets/Images/Books/7_habits.jpg" class="card-img-top" alt="Book 1">
+                  <div class="card-body">
+                      <h5 class="card-title">The 7 Habits of Highly Effective People</h5>
+                      <p class="card-text">Book by Stephen Covey</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="./assets/Images/Books/atomic_habits.jpg" class="card-img-top" alt="Book 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Atomic Habits</h5>
+                      <p class="card-text">Book by James Clear</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="./assets/Images/Books/ikigai.jpg" class="card-img-top" alt="Book 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Ikigai</h5>
+                      <p class="card-text">Book by Francesc Miralles and Hector Garcia</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<h1 class="text-center mb-4" style="margin-top: 10px;">Top Students of the Week</h1>
+<section id="top-students" class="py-5 bg-image">
+  <div class="container">
+      <div class="row text-center justify-content-center">
+          
+          <div class="col-md-2 mb-4">
+              <div class="card">
+                  <img src="https://randomuser.me/api/portraits/women/17.jpg" class="card-img-top rounded-circle" alt="Student 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Glenda Palmer</h5>
+                  </div>
+              </div>
+          </div>
+         
+          <div class="col-md-2 mb-4">
+              <div class="card">
+                  <img src="https://randomuser.me/api/portraits/women/12.jpg" class="card-img-top rounded-circle" alt="Student 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Crystal Gardner</h5>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="col-md-2 mb-4">
+              <div class="card">
+                  <img src="https://randomuser.me/api/portraits/men/7.jpg" class="card-img-top rounded-circle" alt="Student 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Andy Nguyen</h5>
+                  </div>
+              </div>
+          </div>
+         
+          <div class="col-md-2 mb-4">
+              <div class="card">
+                  <img src="https://randomuser.me/api/portraits/men/81.jpg" class="card-img-top rounded-circle" alt="Student 4">
+                  <div class="card-body">
+                      <h5 class="card-title">Ernest Walker</h5>
+                  </div>
+              </div>
+          </div>
+         
+          <div class="col-md-2 mb-4">
+              <div class="card">
+                  <img src="https://randomuser.me/api/portraits/women/42.jpg" class="card-img-top rounded-circle" alt="Student 5">
+                  <div class="card-body">
+                      <h5 class="card-title">Melanie Rodriguez</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+ 
+  <section id="about-developer" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">About the Developer</h2>
+                <p>
+                    Hello! I'm Vishwjeet Singh Vilkhu, the developer behind this project. I am passionate about creating useful tools and resources to help students and professionals achieve their goals. With a background in IT Sector, I am committed to delivering high-quality, user-friendly solutions.
+                </p>
+                <div class="mt-4">
+                    <a href="https://www.linkedin.com/in/vishwjeet27" class="btn btn-primary me-2" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/chill-vishu" class="btn btn-dark" target="_blank">GitHub</a>
+                    <a href="notice.html" class="btn btn-dark" target="_blank">Important Message!</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="./assets/Images/developer.png" class="img-fluid rounded-circle" alt="Developer Image" width="320px">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form class="contact-form" id="contactForm" action="process_form.php" method="POST">
+          <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      
+      </div>
+      <div class="col-md-6">
+        <h4>Our Office</h4>
+        <p>
+          WiseWish,<br>
+          indore, Madhya Pradesh<br>
+        </p>
+        <h4>Email Us</h4>
+        <p>support@wisewish.com</p>
+        <h4>Call Us</h4>
+        <p>+00 000-0000-000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 WiseWish. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var counters = document.querySelectorAll('.counter');
+      var speed = 800;
+
+      counters.forEach(counter => {
+          var updateCount = () => {
+              var target = +counter.getAttribute('data-count');
+              var count = +counter.innerText;
+              var increment = target / speed;
+
+              if (count < target) {
+                  counter.innerText = Math.ceil(count + increment);
+                  setTimeout(updateCount, 1);
+              } else {
+                  counter.innerText = target;
+              }
+          };
+
+          updateCount();
+      });
+  });
+
+
+</script>
+</body>
+</html>

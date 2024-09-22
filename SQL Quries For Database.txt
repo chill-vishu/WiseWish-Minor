@@ -1,0 +1,100 @@
+1) Creating Database
+CREATE DATABASE user_db;
+USE user_db;
+
+
+2) Creating Contact Table
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    message TEXT
+);
+
+
+3) Creating Users Table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+4) Contact Form Submission Table
+CREATE TABLE contact_form_submissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,  -- Optional foreign key to link a user to the submission
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+5) Crate Scholarship Aplications Table
+CREATE TABLE scholarship_applications (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    applicant_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    institution VARCHAR(255) NOT NULL,
+    gpa FLOAT NOT NULL,
+    personal_statement TEXT NOT NULL,
+    status VARCHAR(50) NOT NULL DEFAULT 'Pending'
+);
+
+
+
+6) Create Admin Table 
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+
+7) Create Admin Users Table
+CREATE TABLE admin_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+
+8) Create Table Student 
+CREATE TABLE students (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+9) Adding Profile Photo Section To Add In Users Table
+ALTER TABLE users ADD COLUMN profile_photo VARCHAR(255) DEFAULT 'default-profile.jpg';
+
+
+10) Creating Achievements, Certificates & Languages Table
+CREATE TABLE achievements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    achievement_name VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE certificates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    certificate_name VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE languages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    language_name VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

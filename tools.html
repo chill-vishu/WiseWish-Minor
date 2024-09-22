@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tools - WiseWish</title>
+  <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    .hero {
+      background: url('./assets/Images/toolsbg.avif') center center/cover no-repeat;
+      color: black;
+      text-shadow: 3px 3px 20px gray;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .calculator-section {
+      padding: 40px 0;
+    }
+    .card {
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+    .modal-content {
+      padding: 20px;
+    }
+    .btn-calculate {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/Images/logo.png" alt="Bootstrap" width="80px" height="40px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="tools.html">Tools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="studyres.html">Study Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="text-center">
+    <h1>Student Tools</h1>
+  </div>
+</section>
+
+<h3 class="text-center mt-5">Academic Tools</h3>
+<hr class="mb-5">
+
+<div class="row">
+  <section class="calculator-section">
+    <div class="container">
+      <div class="row text-center">
+        <!-- <h2 class="mb-5">Useful Tools for Students</h2> -->
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">CGPA Calculator</h5>
+              <p class="card-text">Calculate your CGPA (Cumulative Grade Point Average) easily.</p>
+              <a href="#cgpaCalculator" class="btn btn-primary" data-bs-toggle="modal">Calculate Now</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Percentage Calculator</h5>
+              <p class="card-text">Convert your marks into percentage effortlessly.</p>
+              <a href="#percentageCalculator" class="btn btn-primary" data-bs-toggle="modal">Calculate Now</a>
+            </div>
+          </div>
+  
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">SGPA to CGPA Converter</h5>
+              <p class="card-text">Convert your SGPA to CGPA.</p>
+              <a href="#sgpaToCgpaCalculator" class="btn btn-primary" data-bs-toggle="modal">Convert Now</a>
+            </div>
+          </div>
+        </div>
+        
+       <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title">Attendance Tracker</h4>
+              <p class="card-text">Track your attendance by entering the total and attended classes.</p>
+              <a href="#attendanceTracker" class="btn btn-primary" data-bs-toggle="modal">Track Now</a>
+            </div>
+          </div>
+        </div>
+  
+        <h3 class="text-center mt-5">Productivity Tools</h3>
+        <hr class="mb-5">
+       
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Pomodoro Timer</h4>
+                <p class="card-text">Boost productivity by using the Pomodoro Technique.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pomodoroTimerModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Daily Task Manager</h4>
+                <p class="card-text">Organize your daily tasks efficiently.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskManagerModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Focus Time Calculator</h4>
+                <p class="card-text">Plan your focused study sessions with break intervals.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#focusTimeModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="text-center mt-5">Health & Wellness Tools</h3>
+        <hr class="mb-5">
+        
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Calorie Intake Calculator</h4>
+                <p class="card-text">Estimate your daily calorie needs.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calorieIntakeModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Sleep Cycle Calculator</h4>
+                <p class="card-text">Calculate the optimal sleep or wake-up time.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sleepCycleModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Step Counter Estimate</h4>
+                <p class="card-text">Estimate your ideal daily step count based on activity level.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stepCounterModal">Use Tool</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    
+  </section>
+</div>
+
+<section id="guide" class="py-5 bg-light">
+  <div class="container">
+      <h2 class="text-center mb-4">How to Use These Tools</h2>
+
+      
+      <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+              <h4>Academic Tools</h4>
+          </div>
+          <div class="card-body">
+              <h5><strong>1. CGPA Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To calculate your cumulative grade point average (CGPA) based on your semester-wise grades.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter the grades and credit hours for each subject.</li>
+                  <li>Add all the subjects for your current semester.</li>
+                  <li>Click <strong>"Calculate"</strong> to get your CGPA.</li>
+                  <li>The tool will compute the weighted average of your grades across semesters.</li>
+              </ol>
+
+              <h5><strong>2. Percentage Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To convert your GPA or CGPA into a percentage format.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter your GPA or CGPA in the input field.</li>
+                  <li>Click <strong>"Convert to Percentage"</strong>.</li>
+                  <li>The tool will display the equivalent percentage based on the university conversion formula.</li>
+              </ol>
+
+              <h5><strong>3. SGPA to CGPA Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To convert your semester grade point average (SGPA) into CGPA.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter your SGPA for each semester.</li>
+                  <li>Add as many semesters as needed.</li>
+                  <li>Click <strong>"Calculate CGPA"</strong> to see your cumulative score.</li>
+                  <li>The tool will average the SGPA scores to generate the CGPA.</li>
+              </ol>
+
+              <h5><strong>4. Attendance Tracker</strong></h5>
+              <p><strong>Purpose:</strong> To keep track of your attendance percentage and ensure you meet attendance requirements.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter the total number of classes conducted.</li>
+                  <li>Enter the number of classes you attended.</li>
+                  <li>Click <strong>"Calculate Attendance"</strong>.</li>
+                  <li>The tool will display your current attendance percentage.</li>
+              </ol>
+          </div>
+      </div>
+
+      
+      <div class="card mb-4">
+          <div class="card-header bg-success text-white">
+              <h4>Productivity Tools</h4>
+          </div>
+          <div class="card-body">
+              <h5><strong>1. Pomodoro Timer</strong></h5>
+              <p><strong>Purpose:</strong> To help you manage study or work time effectively using the Pomodoro technique.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Set a work session of 25 minutes (default Pomodoro).</li>
+                  <li>Click <strong>"Start Timer"</strong> and work without distractions.</li>
+                  <li>Once the timer ends, take a 5-minute break.</li>
+                  <li>Repeat this process until your work session is complete.</li>
+              </ol>
+
+              <h5><strong>2. Daily Task Manager</strong></h5>
+              <p><strong>Purpose:</strong> To plan and track your daily tasks effectively.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Add your tasks for the day by entering them in the task input field.</li>
+                  <li>Mark tasks as completed as you finish them.</li>
+                  <li>Review your progress at the end of the day.</li>
+              </ol>
+
+              <h5><strong>3. Focus Time Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To help calculate how much focused work you can achieve in a given day or week.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Input the total number of hours available for focused work.</li>
+                  <li>Enter the duration of your work intervals and breaks.</li>
+                  <li>Click <strong>"Calculate Focus Time"</strong> to see the total amount of focused time you can work in a day.</li>
+              </ol>
+          </div>
+      </div>
+
+      
+      <div class="card mb-4">
+          <div class="card-header bg-info text-white">
+              <h4>Health & Wellness Tools</h4>
+          </div>
+          <div class="card-body">
+              <h5><strong>1. Calorie Intake Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To help you calculate your daily calorie needs based on activity level and weight goals.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter your age, gender, height, and weight.</li>
+                  <li>Choose your activity level (sedentary, active, etc.).</li>
+                  <li>Click <strong>"Calculate"</strong> to get your daily calorie intake recommendation.</li>
+              </ol>
+
+              <h5><strong>2. Sleep Cycle Calculator</strong></h5>
+              <p><strong>Purpose:</strong> To help you determine the best time to go to bed or wake up to complete a full sleep cycle.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter the time you need to wake up or go to bed.</li>
+                  <li>Click <strong>"Calculate"</strong> to see the optimal times for starting or ending your sleep cycle.</li>
+              </ol>
+
+              <h5><strong>3. Step Counter Estimate</strong></h5>
+              <p><strong>Purpose:</strong> To estimate the number of steps you should take daily based on your fitness goals.</p>
+              <p><strong>How to Use:</strong></p>
+              <ol>
+                  <li>Enter your daily activity level and fitness goal.</li>
+                  <li>Click <strong>"Calculate Steps"</strong> to get an estimate of how many steps you need to take each day.</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 WiseWish. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="modal fade" id="cgpaCalculator" tabindex="-1" aria-labelledby="cgpaCalculatorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cgpaCalculatorLabel">CGPA Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="cgpaForm">
+          <div class="mb-3">
+            <label for="semesters" class="form-label">Enter CGPA for each semester (comma separated):</label>
+            <input type="text" class="form-control" id="semesters" placeholder="e.g., 7.5, 8.0, 7.8, 8.2">
+          </div>
+          <button type="button" class="btn btn-primary btn-calculate" onclick="calculateCGPA()">Calculate</button>
+          <div id="cgpaResult" class="mt-3"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="percentageCalculator" tabindex="-1" aria-labelledby="percentageCalculatorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="percentageCalculatorLabel">Percentage Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="percentageForm">
+          <div class="mb-3">
+            <label for="marksObtained" class="form-label">Enter Marks Obtained:</label>
+            <input type="number" class="form-control" id="marksObtained" placeholder="Marks Obtained">
+          </div>
+          <div class="mb-3">
+            <label for="totalMarks" class="form-label">Enter Total Marks:</label>
+            <input type="number" class="form-control" id="totalMarks" placeholder="Total Marks">
+          </div>
+          <button type="button" class="btn btn-primary btn-calculate" onclick="calculatePercentage()">Calculate</button>
+          <div id="percentageResult" class="mt-3"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="sgpaToCgpaCalculator" tabindex="-1" aria-labelledby="sgpaToCgpaCalculatorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sgpaToCgpaCalculatorLabel">SGPA to CGPA Converter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="sgpaForm">
+          <div class="mb-3">
+            <label for="sgpa" class="form-label">Enter SGPA:</label>
+            <input type="text" class="form-control" id="sgpa" placeholder="e.g., 8.5">
+          </div>
+          <button type="button" class="btn btn-primary btn-calculate" onclick="convertSGPAToCGPA()">Convert</button>
+          <div id="sgpaResult" class="mt-3"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="gpaCalculator" tabindex="-1" aria-labelledby="gpaCalculatorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="gpaCalculatorLabel">GPA Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="gpaForm">
+          <div class="mb-3">
+            <label for="gpaCredits" class="form-label">Enter GPA:</label>
+            <input type="text" class="form-control" id="gpaCredits" placeholder="e.g., 8.2">
+          </div>
+          <button type="button" class="btn btn-primary btn-calculate" onclick="calculateGPA()">Calculate</button>
+          <div id="gpaResult" class="mt-3"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="attendanceTracker" tabindex="-1" aria-labelledby="attendanceTrackerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="attendanceTrackerLabel">Attendance Tracker</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="attendanceForm">
+          <div class="mb-3">
+            <label for="totalClasses" class="form-label">Total Classes:</label>
+            <input type="number" class="form-control" id="totalClasses" placeholder="Enter total number of classes">
+          </div>
+          <div class="mb-3">
+            <label for="attendedClasses" class="form-label">Attended Classes:</label>
+            <input type="number" class="form-control" id="attendedClasses" placeholder="Enter attended number of classes">
+          </div>
+          <button type="button" class="btn btn-primary btn-calculate" onclick="calculateAttendance()">Calculate</button>
+          <div id="attendanceResult" class="mt-3"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="pomodoroTimerModal" tabindex="-1" aria-labelledby="pomodoroTimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pomodoroTimerLabel">Pomodoro Timer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Stay productive by working in intervals.</p>
+        <div>
+          <h4 id="pomodoroTime">25:00</h4>
+          <button class="btn btn-primary" id="pomodoroStart" onclick="startPomodoro()">Start Pomodoro</button>
+          <button class="btn btn-secondary" id="pomodoroReset" onclick="resetPomodoro()" disabled>Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="taskManagerModal" tabindex="-1" aria-labelledby="taskManagerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="taskManagerLabel">Daily Task Manager</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Track your daily tasks:</p>
+        <ul id="taskList" class="list-group mb-3"></ul>
+        <input type="text" id="taskInput" class="form-control mb-3" placeholder="Enter a new task">
+        <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="focusTimeModal" tabindex="-1" aria-labelledby="focusTimeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="focusTimeLabel">Focus Time Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Calculate your focused study time based on available hours and break intervals.</p>
+        <div class="mb-3">
+          <label for="availableHours" class="form-label">Available Study Hours:</label>
+          <input type="number" id="availableHours" class="form-control" placeholder="Enter available hours">
+        </div>
+        <div class="mb-3">
+          <label for="sessionLength" class="form-label">Study Session Length (in minutes):</label>
+          <input type="number" id="sessionLength" class="form-control" placeholder="Enter session length">
+        </div>
+        <div class="mb-3">
+          <label for="breakLength" class="form-label">Break Length (in minutes):</label>
+          <input type="number" id="breakLength" class="form-control" placeholder="Enter break length">
+        </div>
+        <button class="btn btn-primary" onclick="calculateFocusTime()">Calculate</button>
+        <h4 class="mt-4" id="focusTimeResult"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="calorieIntakeModal" tabindex="-1" aria-labelledby="calorieIntakeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="calorieIntakeLabel">Calorie Intake Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Estimate your daily caloric needs based on your body and activity level.</p>
+        <div class="mb-3">
+          <label for="calorieAge" class="form-label">Age:</label>
+          <input type="number" id="calorieAge" class="form-control" placeholder="Enter your age">
+        </div>
+        <div class="mb-3">
+          <label for="calorieWeight" class="form-label">Weight (kg):</label>
+          <input type="number" id="calorieWeight" class="form-control" placeholder="Enter your weight">
+        </div>
+        <div class="mb-3">
+          <label for="calorieHeight" class="form-label">Height (cm):</label>
+          <input type="number" id="calorieHeight" class="form-control" placeholder="Enter your height">
+        </div>
+        <div class="mb-3">
+          <label for="calorieActivity" class="form-label">Activity Level:</label>
+          <select id="calorieActivity" class="form-select">
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly Active</option>
+            <option value="1.55">Moderately Active</option>
+            <option value="1.725">Very Active</option>
+            <option value="1.9">Super Active</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="calculateCalories()">Calculate Calories</button>
+        <h4 class="mt-4" id="calorieResult"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sleepCycleModal" tabindex="-1" aria-labelledby="sleepCycleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sleepCycleLabel">Sleep Cycle Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Calculate the best time to wake up or go to bed based on full sleep cycles.</p>
+        <div class="mb-3">
+          <label for="sleepCycleTime" class="form-label">Select Time:</label>
+          <input type="time" id="sleepCycleTime" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Are you calculating for:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sleepCycleOption" id="bedtimeOption" value="bedtime">
+            <label class="form-check-label" for="bedtimeOption">Bedtime</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sleepCycleOption" id="wakeUpOption" value="wakeUp" checked>
+            <label class="form-check-label" for="wakeUpOption">Wake-up Time</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="calculateSleepCycle()">Calculate Sleep Cycles</button>
+        <h4 class="mt-4" id="sleepCycleResult"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="sleepCycleModal" tabindex="-1" aria-labelledby="sleepCycleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sleepCycleLabel">Sleep Cycle Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Calculate the best time to wake up or go to bed based on full sleep cycles.</p>
+        <div class="mb-3">
+          <label for="sleepCycleTime" class="form-label">Select Time:</label>
+          <input type="time" id="sleepCycleTime" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Are you calculating for:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sleepCycleOption" id="bedtimeOption" value="bedtime">
+            <label class="form-check-label" for="bedtimeOption">Bedtime</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sleepCycleOption" id="wakeUpOption" value="wakeUp" checked>
+            <label class="form-check-label" for="wakeUpOption">Wake-up Time</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="calculateSleepCycle()">Calculate Sleep Cycles</button>
+        <h4 class="mt-4" id="sleepCycleResult"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="stepCounterModal" tabindex="-1" aria-labelledby="stepCounterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="stepCounterLabel">Step Counter Estimate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Estimate how many steps you should aim to take each day to stay healthy.</p>
+        <div class="mb-3">
+          <label for="stepActivityLevel" class="form-label">Activity Level:</label>
+          <select id="stepActivityLevel" class="form-select">
+            <option value="sedentary">Sedentary (little to no exercise)</option>
+            <option value="lightly_active">Lightly Active (1-3 days a week)</option>
+            <option value="moderately_active">Moderately Active (3-5 days a week)</option>
+            <option value="very_active">Very Active (6-7 days a week)</option>
+            <option value="super_active">Super Active (twice a day)</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="estimateSteps()">Estimate Steps</button>
+        <h4 class="mt-4" id="stepCounterResult"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  
+  function calculateCGPA() {
+    const cgpaInput = document.getElementById('semesters').value;
+    const semesters = cgpaInput.split(',').map(Number);
+    const sum = semesters.reduce((a, b) => a + b, 0);
+    const cgpa = (sum / semesters.length).toFixed(2);
+    document.getElementById('cgpaResult').innerHTML = `<strong>Your CGPA is: ${cgpa}</strong>`;
+  }
+
+ 
+  function calculatePercentage() {
+    const marksObtained = parseFloat(document.getElementById('marksObtained').value);
+    const totalMarks = parseFloat(document.getElementById('totalMarks').value);
+    const percentage = ((marksObtained / totalMarks) * 100).toFixed(2);
+    document.getElementById('percentageResult').innerHTML = `<strong>Your Percentage is: ${percentage}%</strong>`;
+  }
+
+  
+  function convertSGPAToCGPA() {
+    const sgpa = parseFloat(document.getElementById('sgpa').value);
+    const cgpa = (sgpa * 0.95).toFixed(2); 
+    document.getElementById('sgpaResult').innerHTML = `<strong>Your CGPA is: ${cgpa}</strong>`;
+  }
+
+
+  function calculateAttendance() {
+    const totalClasses = parseInt(document.getElementById('totalClasses').value);
+    const attendedClasses = parseInt(document.getElementById('attendedClasses').value);
+
+    if (totalClasses > 0 && attendedClasses >= 0) {
+      const attendance = ((attendedClasses / totalClasses) * 100).toFixed(2);
+      document.getElementById('attendanceResult').innerHTML = `<strong>Your Attendance is: ${attendance}%</strong>`;
+    } else {
+      document.getElementById('attendanceResult').innerHTML = `<strong>Please enter valid numbers for total and attended classes.</strong>`;
+    }
+  }
+ 
+
+  let pomodoroInterval;
+  let pomodoroTimeLeft = 1500;
+
+  function startPomodoro() {
+    document.getElementById("pomodoroStart").disabled = true;
+    document.getElementById("pomodoroReset").disabled = false;
+
+    pomodoroInterval = setInterval(function () {
+      if (pomodoroTimeLeft > 0) {
+        pomodoroTimeLeft--;
+        updatePomodoroDisplay();
+      } else {
+        clearInterval(pomodoroInterval);
+        alert("Time's up! Take a break.");
+        resetPomodoro();
+      }
+    }, 1000);
+  }
+
+  function resetPomodoro() {
+    clearInterval(pomodoroInterval);
+    pomodoroTimeLeft = 1500;
+    updatePomodoroDisplay();
+    document.getElementById("pomodoroStart").disabled = false;
+    document.getElementById("pomodoroReset").disabled = true;
+  }
+
+  function updatePomodoroDisplay() {
+    const minutes = Math.floor(pomodoroTimeLeft / 60);
+    const seconds = pomodoroTimeLeft % 60;
+    document.getElementById("pomodoroTime").textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
+  
+  function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+    if (taskText) {
+      const taskList = document.getElementById('taskList');
+      const li = document.createElement('li');
+      li.textContent = taskText;
+      li.className = 'list-group-item d-flex justify-content-between align-items-center';
+      const removeButton = document.createElement('button');
+      removeButton.className = 'btn btn-danger btn-sm';
+      removeButton.textContent = 'Remove';
+      removeButton.onclick = () => taskList.removeChild(li);
+      li.appendChild(removeButton);
+      taskList.appendChild(li);
+      taskInput.value = '';
+    }
+  }
+
+
+ 
+  function calculateFocusTime() {
+    const availableHours = parseFloat(document.getElementById('availableHours').value);
+    const sessionLength = parseFloat(document.getElementById('sessionLength').value);
+    const breakLength = parseFloat(document.getElementById('breakLength').value);
+
+    if (availableHours > 0 && sessionLength > 0 && breakLength >= 0) {
+      const totalMinutes = availableHours * 60;
+      const totalSessionTime = sessionLength + breakLength;
+      const focusSessions = Math.floor(totalMinutes / totalSessionTime);
+      const focusTime = focusSessions * sessionLength;
+
+      document.getElementById('focusTimeResult').textContent =
+        `You can fit in ${focusSessions} focused study sessions, with a total of ${focusTime} minutes of focused study time.`;
+    } else {
+      document.getElementById('focusTimeResult').textContent = 'Please enter valid study details.';
+    }
+  }
+
+  
+  function calculateCalories() {
+    const age = parseInt(document.getElementById('calorieAge').value);
+    const weight = parseFloat(document.getElementById('calorieWeight').value);
+    const height = parseFloat(document.getElementById('calorieHeight').value);
+    const activityLevel = parseFloat(document.getElementById('calorieActivity').value);
+
+    if (age > 0 && weight > 0 && height > 0) {
+      const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+      const dailyCalories = bmr * activityLevel;
+      document.getElementById('calorieResult').textContent = `You need approximately ${dailyCalories.toFixed(2)} calories per day.`;
+    } else {
+      document.getElementById('calorieResult').textContent = 'Please enter valid inputs.';
+    }
+  }
+
+  function calculateSleepCycle() {
+    const timeInput = document.getElementById('sleepCycleTime').value;
+    const option = document.querySelector('input[name="sleepCycleOption"]:checked').value;
+    const sleepCycles = [90, 180, 270, 360, 450, 540]; 
+
+    if (timeInput) {
+      const [hours, minutes] = timeInput.split(':').map(Number);
+      const date = new Date();
+      date.setHours(hours);
+      date.setMinutes(minutes);
+
+      let results = '';
+      sleepCycles.forEach((cycle) => {
+        const newTime = new Date(date);
+        if (option === 'bedtime') {
+          newTime.setMinutes(newTime.getMinutes() - cycle);
+          results += `Sleep Cycle: ${newTime.getHours()}:${newTime.getMinutes() < 10 ? '0' : ''}${newTime.getMinutes()}<br>`;
+        } else {
+          newTime.setMinutes(newTime.getMinutes() + cycle);
+          results += `Wake Up: ${newTime.getHours()}:${newTime.getMinutes() < 10 ? '0' : ''}${newTime.getMinutes()}<br>`;
+        }
+      });
+
+      document.getElementById('sleepCycleResult').innerHTML = results;
+    } else {
+      document.getElementById('sleepCycleResult').textContent = 'Please select a valid time.';
+    }
+  }
+
+  function estimateSteps() {
+    const activityLevel = document.getElementById('stepActivityLevel').value;
+
+    let steps = 5000;
+    switch (activityLevel) {
+      case 'sedentary':
+        steps = 5000;
+        break;
+      case 'lightly_active':
+        steps = 7500;
+        break;
+      case 'moderately_active':
+        steps = 10000;
+        break;
+      case 'very_active':
+        steps = 12500;
+        break;
+      case 'super_active':
+        steps = 15000;
+        break;
+      default:
+        steps = 5000;
+    }
+
+    document.getElementById('stepCounterResult').textContent = `You should aim for around ${steps} steps per day.`;
+  }
+
+</script>
+
+</body>
+</html>
