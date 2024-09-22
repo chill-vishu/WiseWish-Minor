@@ -56,7 +56,6 @@ Their support made it possible for me to host **WiseWish** and bring this projec
 - **Developed By**: Vishwjeet Singh Vilkhu
 - **Session**: 2024-25
 - **Degree**: Master of Computer Applications (MCA), 3rd Semester, Batch 2023-25
-- **Institution**: SAGE University, Indore
 
 ---
 
