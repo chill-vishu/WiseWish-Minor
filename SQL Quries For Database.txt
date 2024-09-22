@@ -63,38 +63,3 @@ CREATE TABLE admin_users (
 );
 
 
-8) Create Table Student 
-CREATE TABLE students (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    role VARCHAR(50) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-
-9) Adding Profile Photo Section To Add In Users Table
-ALTER TABLE users ADD COLUMN profile_photo VARCHAR(255) DEFAULT 'default-profile.jpg';
-
-
-10) Creating Achievements, Certificates & Languages Table
-CREATE TABLE achievements (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    achievement_name VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
-CREATE TABLE certificates (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    certificate_name VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
-CREATE TABLE languages (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    language_name VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
